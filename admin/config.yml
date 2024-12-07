@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: MicDoesThings/gin-caminetto
+  branch: main
+
+media_folder: "images/gins"
+public_folder: "/images/gins"
+
+collections:
+  - name: "gins"
+    label: "Gins"
+    folder: "_gins"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Distillery", name: "distillery", widget: "string"}
+      - {label: "Alcohol Volume", name: "alcohol_volume", widget: "number", value_type: "float", min: 0, max: 100}
+      - {label: "Country", name: "country", widget: "string"}
+      - {label: "Botanics", name: "botanics", widget: "text"}
+      - {label: "Recommended Tonic", name: "recommended_tonic", widget: "string"}
+      - {label: "Garnish", name: "garnish", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false} 
